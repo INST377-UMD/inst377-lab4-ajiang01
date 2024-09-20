@@ -1,0 +1,46 @@
+body {
+	background-color: cornflowerblue;
+}
+
+.form_box {
+	border: 3px solid white;
+	float: left;
+	width: 30%;
+	padding: 10px;
+	text-align: center;
+	background-color: purple;
+	color: white;
+}
+
+.background_box {
+	border: 3px solid white;
+	float: left;
+	width: 20%;
+	padding: 10px;
+	text-align: center;
+	background-color: purple;
+	margin-left: 20px;
+}
+
+.validate {
+	border: 3px solid white;
+	float: left;
+	clear: left;
+	margin-top: 20px;
+	width: 30%;
+	padding: 10px;
+	text-align: center;
+	background-color: purple;
+	color: white;
+}
+
+.add_text {
+	border: 3px solid white;
+	float: left;
+	margin-left: 20px;
+	margin-top: 20px;
+	width: 20%;
+	padding: 10px;
+	text-align: center;
+	background-color: purple;
+}
