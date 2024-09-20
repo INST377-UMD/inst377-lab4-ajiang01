@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<title> INST377 Lab 4 </title>
+		<link rel = "stylesheet" href = "style.css">
+	</head>
+
+	<body>
+		<h1 id = "default_heading"> INST377 - Lab 4 </h1>
+
+		<!-- Name Section + Form -->
+		<div class = "form_box">
+			<form name = "name_form" onsubmit = "return (name_alert())"> 
+				<label> Name: </label>
+				<input type = "text" placeholder = "Full Name" id = "name" required>
+				<input type = "submit" value = "Alert Me">
+			</form>
+		</div>
+
+		<!-- Name Alert Script -->
+		<script type = "text/javascript">
+			function name_alert() {
+				var name = document.getElementById("name").value;
+				alert ("Hi " + name + "!");
+			}
+		</script>
+
+
+		<!-- Swap Color Section + Button -->
+		<div class = "background_box">
+			<button onclick="change_color()"> Change Color </button>
+
+			<!-- Swap Color Script -->
+			<script type = "text/javascript">
+				function change_color() {
+					var body = document.body;
+
+					if (body.style.backgroundColor === "") {
+						body.style.backgroundColor = "green";
+					} 
+					else {
+						body.style.backgroundColor = ""
+					}
+				}
+			</script>
+		</div>
+
+
+		<!-- Text Validation Section + Form-->
+		<div class = "validate"> 
+			<form name = "validate_form" onsubmit = "return (validate_text())">
+				<label> Text Tester: </label>
+				<input type = "text" placeholder = "Type Text" id = "test_me" required>
+				<input type = "submit" value = "Validate Text">
+			</form>
+
+			<!-- Validation Script-->
+			<script type = "text/javascript">
+				function validate_text() {
+					var validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+					var input = document.getElementById("test_me").value;
+
+					if (validation.test(input)) {
+						alert ("Special character present.");
+						return false;
+					}
+				}
+			</script>
+		</div>
+
+
+		<!-- Add Text Section + Button -->
+		<div class = "add_text">
+			<button onclick = "add_heading_text()"> Add Text </button>
+
+			<!-- Add Text Script-->
+			<script type = "text/javascript">
+				function add_heading_text() {
+					var new_heading = document.getElementById("default_heading");
+
+					if (new_heading.innerHTML.includes("- Add Text") === false) {
+						new_heading.innerHTML += "- Add Text";
+					}
+				}
+			</script>
+		</div>
+	</body>
+</html>
